@@ -138,11 +138,12 @@ namespace DiscordPPReBot
                         {
                             Columns =
                             {
-                                GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto
+                                GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto
                             },
                             Children =
                             {
                                 new Cell("beatmap"),
+                                new Cell("mods"),
                                 new Cell("live pp"),
                                 new Cell("local pp"),
                                 new Cell("pp change"),
@@ -150,6 +151,7 @@ namespace DiscordPPReBot
                                 localOrdered.Select(item => new[]
                                 {
                                     new Cell($"{item.Beatmap.OnlineBeatmapID} - {item.Beatmap}"),
+                                    new Cell(item.Mods),
                                     new Cell($"{item.LivePp:F1}") {Align = Align.Right},
                                     new Cell($"{item.LocalPp:F1}") {Align = Align.Right},
                                     new Cell($"{item.LocalPp - item.LivePp:F1}") {Align = Align.Right},
