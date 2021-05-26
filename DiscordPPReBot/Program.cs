@@ -138,7 +138,8 @@ namespace DiscordPPReBot
                         {
                             Columns =
                             {
-                                GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto
+                                GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto, GridLength.Auto,
+                                GridLength.Auto
                             },
                             Children =
                             {
@@ -246,6 +247,7 @@ namespace DiscordPPReBot
         protected override IBeatmap GetBeatmap() => _beatmap;
         protected override Texture GetBackground() => null;
         protected override Track GetBeatmapTrack() => null;
+        public override Stream GetStream(string storagePath) => null;
     }
 
     internal class UserPlayInfo
