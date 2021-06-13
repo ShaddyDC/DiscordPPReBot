@@ -19,6 +19,7 @@ using osu.Game.Rulesets.Scoring;
 using osu.Game.Scoring;
 using osu.Game.Scoring.Legacy;
 using Alba.CsConsoleFormat;
+using osu.Game.Skinning;
 using Decoder = osu.Game.Beatmaps.Formats.Decoder;
 using Document = Alba.CsConsoleFormat.Document;
 
@@ -247,6 +248,7 @@ namespace DiscordPPReBot
         protected override IBeatmap GetBeatmap() => _beatmap;
         protected override Texture GetBackground() => null;
         protected override Track GetBeatmapTrack() => null;
+        protected override ISkin GetSkin() => null;
         public override Stream GetStream(string storagePath) => null;
     }
 
